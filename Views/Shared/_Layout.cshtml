@@ -1,42 +1,24 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDS | İyi Hizmetin Adresi</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Diyafon Sistemleri</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
-    <style>
-        .navbar {
-            background: linear-gradient(90deg, #4b6cb7, #182848);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .nav-link {
-            color: white !important;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #ffc107 !important;
-            transform: scale(1.05);
-            transition: all 0.3s ease;
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        }
-        .navbar-brand {
-            margin-right: 30px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">
-                <img src="" alt="" width="40" height="40" class="d-inline-block align-text-top">
-                Logo Gelcek
+            <a class="navbar-brand text-white" href="/">
+                <img src="https://fakeimg.pl/40x40" alt="Diyafon Logo" width="40" height="40"
+                    class="d-inline-block align-text-top" />
+                Diyafon Sistemleri
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
                 <span class="navbar-toggler-icon"></span>
@@ -44,27 +26,23 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">
                             <i class="bi bi-house-door"></i> Anasayfa
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="bi bi-tools"></i> Teknik Servis
+                        <a class="nav-link" href="#urunler">
+                            <i class="bi bi-tools"></i> Ürünler
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="bi bi-building"></i> Referanslar
+                        <a class="nav-link" href="#hizmetler">
+                            <i class="bi bi-gear"></i> Hizmetler
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="bi bi-pencil-square"></i> Blog
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#iletisim">
                             <i class="bi bi-telephone"></i> İletişim
                         </a>
                     </li>
@@ -72,13 +50,32 @@
                 <span class="navbar-text text-white me-3">
                     <b>Çalışma Saatleri Pazartesi - Cumartesi : 09:00 - 19:00</b>
                 </span>
-                <a class="btn btn-warning" href="#">
-                    <i class="bi bi-telephone"></i> Bize Ulaşın
+                </li>
+                </ul>
+
+                <a class="btn btn-warning" href="#iletisim">
+                    <i class="bi bi-telephone"></i> Bizimle İletişime Geçin
                 </a>
             </div>
         </div>
     </nav>
-    @RenderBody()
+
+    <!-- Main Content -->
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <partial name="_Footer" />
+
+    <!-- WhatsApp Butonu -->
+    <a href="https://wa.me/901234567890" class="whatsapp-button">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
 </body>
 
 </html>
